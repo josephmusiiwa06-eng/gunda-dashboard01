@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'GUNDA — Athletic Intelligence',
     short_name: 'GUNDA',
     description: 'Zimbabwe Athletic Load Monitoring System',
-    start_url: '/',
+    start_url: '/coach',
     display: 'standalone',
     background_color: '#080c08',
     theme_color: '#d4a017',
