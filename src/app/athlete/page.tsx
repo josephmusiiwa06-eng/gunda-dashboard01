@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react" ;
 const Z = {
   bg:       "#080c08",
   surface:  "#0d140d",
@@ -32,7 +33,10 @@ const sliderColor = (val: number, invert: boolean) => {
   return Z.redBr;
 };
 
-export default function AthletePage() {
+ function AthletePage() {
+    const searchParams = useSearchParams();
+    const athleteId = searchParams.get('id') || 'unknown';
+
   const [step, setStep]       = useState<"checkin"|"rpe"|"context"|"done">("checkin");
   const [values, setValues]   = useState({ sleep_quality:5, fatigue_level:5, muscle_soreness:5, stress_level:5, mood:5 });
   const [rpe, setRpe]         = useState(5);
@@ -363,3 +367,12 @@ export default function AthletePage() {
     </>
   );
 }
+
+export default function AthletePageWrapper() {
+  return (
+    <Suspense fallback={<div style={{background:"#080c08",minHeight:"100vh"}}/>}>
+      <AthletePage/>
+    </Suspense>
+  );
+}
+
