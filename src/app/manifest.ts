@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'GUNDA — Athletic Intelligence',
-    short_name: 'GUNDA',
-    description: 'Zimbabwe Athletic Load Monitoring System',
+    name: 'GUNDA Coach',
+    short_name: 'GUNDA Coach',
+    description: 'GUNDA Coach Dashboard',
     start_url: '/coach',
     display: 'standalone',
     background_color: '#080c08',
@@ -14,11 +14,6 @@ export default function manifest(): MetadataRoute.Manifest {
       {
         src: '/icon-192.png',
         sizes: '192x192',
-        type: 'image/png',
-      },
-      {
-        src: '/icon-512.png',
-        sizes: '512x512',
         type: 'image/png',
       },
     ],
