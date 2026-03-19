@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "GUNDA — Athletic Intelligence",
   description: "Zimbabwe Athletic Load Monitoring System",
-  manifest: "/manifest.webmanifest",
+
   themeColor: "#d4a017",
   appleWebApp: {
     capable: true,
