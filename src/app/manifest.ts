@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'GUNDA Coach',
     short_name: 'GUNDA Coach',
     description: 'GUNDA Coach Dashboard',
-    start_url: '/coach',
+    start_url: '/',
     display: 'standalone',
     background_color: '#080c08',
     theme_color: '#d4a017',
